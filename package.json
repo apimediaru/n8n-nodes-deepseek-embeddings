@@ -2,7 +2,25 @@
   "name": "n8n-nodes-deepseek-embeddings",
   "version": "0.1.0",
   "description": "DeepSeek Embeddings for n8n",
+  "author": "apimediaru",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apimediaru/n8n-nodes-deepseek-embeddings.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apimediaru/n8n-nodes-deepseek-embeddings/issues"
+  },
+  "keywords": [
+    "n8n",
+    "deepseek",
+    "embeddings",
+    "ai",
+    "vector"
+  ],
+  "files": [
+    "dist/**/*"
+  ],
   "n8n": {
     "credentials": [
       "dist/credentials/DeepseekApi.credentials.js"
