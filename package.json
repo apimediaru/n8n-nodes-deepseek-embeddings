@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-deepseek-embeddings",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Embeddings for n8n",
   "author": "apimediaru",
   "license": "MIT",
@@ -26,7 +26,7 @@
       "dist/credentials/DeepseekApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/DeepseekEmbeddings.node.js"
+      "dist/nodes/DeepseekEmbeddings/DeepseekEmbeddings.node.js"
     ]
   },
   "scripts": {
