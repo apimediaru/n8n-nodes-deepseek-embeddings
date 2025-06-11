@@ -1,0 +1,25 @@
+{
+  "name": "n8n-nodes-deepseek-embeddings",
+  "version": "0.1.0",
+  "description": "DeepSeek Embeddings for n8n",
+  "license": "MIT",
+  "n8n": {
+    "credentials": [
+      "dist/credentials/DeepseekApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/DeepseekEmbeddings.node.js"
+    ]
+  },
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "build:watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "gulp": "^4.0.2",
+    "n8n-core": "^1.22.0",
+    "n8n-workflow": "^1.22.0",
+    "typescript": "^5.4.2"
+  }
+}
