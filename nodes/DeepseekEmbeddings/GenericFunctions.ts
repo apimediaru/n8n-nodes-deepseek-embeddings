@@ -4,16 +4,15 @@ import {
 	ILoadOptionsFunctions,
 	IWebhookFunctions,
 	NodeApiError,
-	IHttpRequestMethods,  // Добавляем недостающий тип
-	IRequestOptions,      // Добавляем недостающий тип
+	IHttpRequestMethods,
+	IRequestOptions
 } from 'n8n-workflow';
 
 interface IDeepseekApiRequestOptions {
-	method: IHttpRequestMethods;  // Используем строгий тип
-	endpoint: string;             // Заменяем url на endpoint
+	method: IHttpRequestMethods;
+	endpoint: string;
 	body?: any;
 	qs?: any;
-	headers?: any;
 }
 
 export async function deepseekApiRequest(
@@ -23,14 +22,12 @@ export async function deepseekApiRequest(
 	const credentials = await this.getCredentials('deepseekApi');
 	const baseUrl = 'https://api.deepseek.com/v1';
 
-	// Формируем корректный объект запроса
 	const requestOptions: IRequestOptions = {
 		method: options.method,
 		uri: `${baseUrl}${options.endpoint}`,
 		headers: {
 			'Content-Type': 'application/json',
 			Authorization: `Bearer ${credentials.apiKey}`,
-			...(options.headers || {}),
 		},
 		body: options.body,
 		qs: options.qs,
